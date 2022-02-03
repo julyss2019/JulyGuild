@@ -1,0 +1,88 @@
+row: 6
+title: '&e&l公会({page}/{total_page})'
+# 公会可显示的位置，支持使用 '-' 作为范围界定符，使用 ',' 分隔
+# 其他物品
+other_items:
+  glass:
+    indexes: '47-48,50,52-53'
+    icon:
+      material: STAINED_GLASS_PANE
+      display_name: ''
+      lores:
+        - '&cby July_ss'
+# 插件物品
+items:
+  back:
+    index: 49
+    sender: PLAYER # 支持玩家：PLAYER 控制台：CONSOLE
+    command: 'bs open MainShop <player>' # 变量 <player> 玩家
+    icon:
+      material: ARROW
+      display_name: '&c返回'
+  guild:
+    indexes: '11-17,20-26,29-35'
+    icon:
+      material: STONE # 该 material 会被强制设置为公会图标
+      use_papi: true
+      display_name: '&bNo.{guild_ranking} {guild_name}'
+      lores:
+        - ' &f会长: {guild_owner}'
+        - ' &f公会币储备: {guild_gmoney}'
+        - ' &f人数: {guild_member_count}/{guild_max_member_count}'
+        - ' &f创建时间: {guild_creation_time}'
+        - ' &f点击查看详细信息或加入'
+  create_guild:
+    index: 51
+    icon:
+      material: EMERALD
+      display_name: '&f创建公会'
+      lores:
+        - ' &e也可以选择单击上方的图标来加入公会'
+  my_guild:
+    index: 51
+    icon:
+      material: SKULL_ITEM
+      display_name: '&f我的公会'
+      skull_texture: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzVjZjAyOWRkN2YyYmY1Mjk3ODQwMDBiNWE4ZGIyMWRmODVjN2E4ZDQwZDUyOTViYWFhODliMTQ1YzJhNDFhYiJ9fX0='
+      durability: 3
+  page_items:
+    precious_page:
+      have:
+        index: 46
+        icon:
+          material: BOOK
+          display_name: '&f上一页'
+          enchantments:
+            DAMAGE_ALL: 1
+          flags:
+            - 'HIDE_ATTRIBUTES'
+            - 'HIDE_ENCHANTS'
+          lores:
+            - ' &f点击切换'
+      not_have:
+        index: 46
+        icon:
+          material: BOOK
+          display_name: '&f上一页'
+          lores:
+            - ' &7没有上一页了'
+    next_page:
+      have:
+        index: 54
+        icon:
+          material: BOOK
+          display_name: '&f下一页'
+          enchantments:
+            DAMAGE_ALL: 1
+          flags:
+            - 'HIDE_ATTRIBUTES'
+            - 'HIDE_ENCHANTS'
+          lores:
+            - ' &f点击切换'
+      not_have:
+        index: 54
+        icon:
+          material: BOOK
+          display_name: '&f下一页'
+          lores:
+            - ' &7没有下一页了'

@@ -1,0 +1,148 @@
+indexes: '29-35'
+row: 6
+title: '&e&l管理成员'
+other_items:
+  member:
+    index: 14
+    icon:
+      material: SKULL_ITEM
+      durability: 3
+      skull_texture: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjU1ZmU2MDdiMDZiMTQwNTQxM2U2ZTI5OTljMmYzNjA0N2ZmNzhmZTc2Njk3MWMxMWIzOTIzNWY2MGUyMmEzZiJ9fX0='
+      display_name: '{member_name}'
+      lores:
+        - ' &f职位: {member_position}'
+        - ' &f入会时间: {member_join_time}'
+        - ' &f已赞助公会币: {member_donated_gmoney}'
+        - ''
+        - ' &c点击下方图标进行操作'
+items:
+  back:
+    index: 50
+    icon:
+      material: ARROW
+      display_name: '&c返回'
+  member_kick:
+    priority: 0
+    icon:
+      material: SHEARS
+      display_name: '&c踢出'
+      lores:
+        - '&c将成员移出公会'
+    ConfirmGUI:
+      row: 3
+      title: '&c&l确认'
+      items:
+        confirm:
+          index: 14
+          icon:
+            material: NETHER_STAR
+            display_name: '&c确认踢出'
+            lores:
+              - ' &c警告: 本操作不可逆, 这将使 &e{target} &c的公会财产全部清空!'
+        cancel:
+          index: 27
+          icon:
+            material: ARROW
+            display_name: '&c取消操作'
+  per_member_kick:
+    give:
+      priority: -1
+      icon:
+        material: NAME_TAG
+        flags:
+          - '*'
+        display_name: '&c给予踢人的权限'
+    take:
+      priority: -1
+      icon:
+        material: NAME_TAG
+        flags:
+          - '*'
+        enchantments:
+          DAMAGE_ALL: 1
+        display_name: '&c取消踢人的权限'
+  per_set_member_damage:
+    give:
+      priority: -2
+      icon:
+        material: GOLD_SWORD
+        flags:
+          - '*'
+        display_name: '&c给予开关成员PVP的权限'
+    take:
+      priority: -2
+      icon:
+        material: GOLD_SWORD
+        flags:
+          - '*'
+        enchantments:
+          DAMAGE_ALL: 1
+        display_name: '&c取消开关成员PVP的权限'
+  per_player_join_check:
+    give:
+      priority: -3
+      icon:
+        display_name: '&c给予入会审批的权限'
+        material: TOTEM
+        flags:
+          - '*'
+    take:
+      priority: -3
+      icon:
+        material: TOTEM
+        flags:
+          - '*'
+        enchantments:
+          DAMAGE_ALL: 1
+        display_name: '&c取消入会审批的权限'
+  per_use_shop:
+    give:
+      priority: -4
+      icon:
+        material: WHEAT
+        display_name: '&c给予使用公会商店的权限'
+        lores:
+          - ' &c这将允许 {member_name} 消费公会币'
+    take:
+      priority: -4
+      icon:
+        material: WHEAT
+        flags:
+          - '*'
+        enchantments:
+          DAMAGE_ALL: 1
+        display_name: '&c取消使用公会商店的权限'
+  per_use_icon_repository:
+    give:
+      priority: -5
+      icon:
+        material: ITEM_FRAME
+        display_name: '&c给予使用图标仓库的权限'
+        lores:
+          - ' &f这将允许 {member_name} 设置公会图标'
+    take:
+      priority: -5
+      icon:
+        material: ITEM_FRAME
+        flags:
+          - '*'
+        enchantments:
+          DAMAGE_ALL: 1
+        display_name: '&c取消使用图标商店的权限'
+  per_set_announcements:
+    give:
+      priority: -6
+      icon:
+        material: MAP
+        display_name: '&c给予设置公告的权限'
+        lores:
+          - ' &f这将允许 {member_name} 设置公告'
+    take:
+      priority: -6
+      icon:
+        material: MAP
+        flags:
+          - '*'
+        enchantments:
+          DAMAGE_ALL: 1
+        display_name: '&c取消设置公告的权限'

@@ -1,0 +1,18 @@
+row: 6
+title: '&e&l图标仓库({page}/{total_page})'
+items:
+  back:
+    index: 50
+    icon:
+      material: ARROW
+      display_name: '&c返回'
+  guild_icon:
+    indexes: '11-17,20-26,29-35'
+    not_using:
+      icon:
+        material: STONE # 该 material 会被强制设置为公会图标
+    using:
+      icon:
+        material: STONE # 该 material 会被强制设置为公会图标
+        lores:
+          - ' &f使用中'

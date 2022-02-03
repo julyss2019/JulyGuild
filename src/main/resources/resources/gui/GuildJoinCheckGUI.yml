@@ -1,0 +1,59 @@
+title: '&e&l入会审批({page}/{total_page})'
+row: 6
+items:
+  request:
+    indexes: '11-17,20-26,29-35'
+    icon:
+      use_papi: true
+      material: PAPER
+      display_name: '{sender_name}'
+      lores:
+        - ' &f申请时间: {send_time}'
+        - ' &f拥有金币: %vault_eco_balance%'
+        - ' &a左键接受 &c右键拒绝'
+  back:
+    index: 50
+    icon:
+      material: ARROW
+      display_name: '&f返回'
+  page_items:
+    precious_page:
+      have:
+        index: 46
+        icon:
+          material: BOOK
+          display_name: '&f上一页'
+          enchantments:
+            DAMAGE_ALL: 1
+          flags:
+            - 'HIDE_ATTRIBUTES'
+            - 'HIDE_ENCHANTS'
+          lores:
+            - ' &f点击切换'
+      not_have:
+        index: 46
+        icon:
+          material: BOOK
+          display_name: '&f上一页'
+          lores:
+            - ' &7没有上一页了'
+    next_page:
+      have:
+        index: 54
+        icon:
+          material: BOOK
+          display_name: '&f下一页'
+          enchantments:
+            DAMAGE_ALL: 1
+          flags:
+            - 'HIDE_ATTRIBUTES'
+            - 'HIDE_ENCHANTS'
+          lores:
+            - ' &f点击切换'
+      not_have:
+        index: 54
+        icon:
+          material: BOOK
+          display_name: '&f下一页'
+          lores:
+            - ' &7没有下一页了'

@@ -1,0 +1,132 @@
+# manager 管理者的定义：
+# 拥有：MANAGE_PERMISSION, MEMBER_KICK 中一个或多个权限的成员
+# 管理员看到的GUI
+manager:
+  row: 6
+  title: '&e&l成员管理({page}/{total_page})'
+  items:
+    member:
+      indexes: '11-17,20-26,29-35'
+      icon:
+        use_gp: true
+        material: SKULL_ITEM
+        durability: 3
+        skull_texture: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjU1ZmU2MDdiMDZiMTQwNTQxM2U2ZTI5OTljMmYzNjA0N2ZmNzhmZTc2Njk3MWMxMWIzOTIzNWY2MGUyMmEzZiJ9fX0='
+        display_name: '{member_name}'
+        lores:
+          - ' &f公会: {guild_name}'
+          - ' &f职位: {member_position}'
+          - ' &f入会时间: {member_join_time}'
+          - ' &f已赞助公会币: {member_donated_gmoney}'
+          - ''
+          - ' &c点击转到管理界面'
+    page_items:
+      precious_page:
+        have:
+          index: 46
+          icon:
+            material: BOOK
+            display_name: '&f上一页'
+            enchantments:
+              DAMAGE_ALL: 1
+            flags:
+              - 'HIDE_ATTRIBUTES'
+              - 'HIDE_ENCHANTS'
+            lores:
+              - ' &f点击切换'
+        not_have:
+          index: 46
+          icon:
+            material: BOOK
+            display_name: '&f上一页'
+            lores:
+              - ' &7没有上一页了'
+      next_page:
+        have:
+          index: 54
+          icon:
+            material: BOOK
+            display_name: '&f下一页'
+            enchantments:
+              DAMAGE_ALL: 1
+            flags:
+              - 'HIDE_ATTRIBUTES'
+              - 'HIDE_ENCHANTS'
+            lores:
+              - ' &f点击切换'
+        not_have:
+          index: 54
+          icon:
+            material: BOOK
+            display_name: '&f下一页'
+            lores:
+              - ' &7没有下一页了'
+    back:
+      index: 50
+      icon:
+        material: ARROW
+        display_name: '&f返回'
+# 玩家或成员看到的GUI
+player:
+  row: 6
+  title: '&e&l成员列表({page}/{total_page})'
+  items:
+    member:
+      indexes: '11-17,20-26,29-35'
+      icon:
+        material: SKULL_ITEM
+        durability: 3
+        skull_texture: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjU1ZmU2MDdiMDZiMTQwNTQxM2U2ZTI5OTljMmYzNjA0N2ZmNzhmZTc2Njk3MWMxMWIzOTIzNWY2MGUyMmEzZiJ9fX0='
+        display_name: '{member_name}'
+        use_papi: true
+        lores:
+          - ' &f公会: {guild_name}'
+          - ' &f职位: {member_position}'
+          - ' &f入会时间: {member_join_time}'
+          - ' &f已赞助公会币: {member_donated_gmoney}'
+    page_items:
+      precious_page:
+        have:
+          index: 46
+          icon:
+            material: BOOK
+            display_name: '&f上一页'
+            enchantments:
+              DAMAGE_ALL: 1
+            flags:
+              - 'HIDE_ATTRIBUTES'
+              - 'HIDE_ENCHANTS'
+            lores:
+              - ' &f点击切换'
+        not_have:
+          index: 46
+          icon:
+            material: BOOK
+            display_name: '&f上一页'
+            lores:
+              - ' &7没有上一页了'
+      next_page:
+        have:
+          index: 54
+          icon:
+            material: BOOK
+            display_name: '&f下一页'
+            enchantments:
+              DAMAGE_ALL: 1
+            flags:
+              - 'HIDE_ATTRIBUTES'
+              - 'HIDE_ENCHANTS'
+            lores:
+              - ' &f点击切换'
+        not_have:
+          index: 54
+          icon:
+            material: BOOK
+            display_name: '&f下一页'
+            lores:
+              - ' &7没有下一页了'
+    back:
+      index: 50
+      icon:
+        material: ARROW
+        display_name: '&f返回'

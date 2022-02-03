@@ -1,0 +1,62 @@
+row: 3
+title: '&e&l请选择支付方式'
+items:
+  money:
+    index: 12
+    icon:
+      use_papi: true
+      material: GOLD_INGOT
+      display_name: '&a使用 &e{price}个 &a金币'
+      lores:
+        - ' &f拥有: %vault_eco_balance%个'
+        - ' &f公会名: {name}'
+        - ' &c点击支付'
+    ConfirmGUI:
+      row: 3
+      title: '&c&l确认'
+      items:
+        confirm:
+          index: 14
+          icon:
+            material: NETHER_STAR
+            display_name: '&a确认支付'
+            lores:
+              - ' &e支付方式: 金币'
+              - ' &e金额: {price}'
+        cancel:
+          index: 27
+          icon:
+            material: ARROW
+            display_name: '&c返回'
+  points:
+    index: 16
+    icon:
+      use_papi: true
+      material: DIAMOND
+      display_name: '&a使用 &e{price}个 &a点券'
+      lores:
+        - ' &f拥有: %playerpoints_points%个'
+        - ' &f公会名: {name}'
+        - ' &c点击支付'
+    ConfirmGUI:
+      row: 3
+      title: '&c&l确认'
+      items:
+        confirm:
+          index: 14
+          icon:
+            material: NETHER_STAR
+            display_name: '&a确认支付'
+            lores:
+              - ' &e支付方式: 点券'
+              - ' &e金额: {price}'
+        cancel:
+          index: 27
+          icon:
+            material: ARROW
+            display_name: '&c返回'
+  back:
+    index: 27
+    icon:
+      material: ARROW
+      display_name: '&c返回'

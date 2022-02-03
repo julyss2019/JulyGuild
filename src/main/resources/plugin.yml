@@ -1,0 +1,15 @@
+name: JulyGuild
+main: com.github.julyss2019.mcsp.julyguild.JulyGuild
+author: July_ss
+version: ${pom.version}
+api-version: 1.13
+softdepend:
+- PlayerPoints
+- JulyLibrary
+- Vault
+- PlaceholderAPI
+commands:
+  jguild:
+    aliases:
+      - guild
+      - jg

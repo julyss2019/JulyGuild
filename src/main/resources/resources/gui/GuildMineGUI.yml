@@ -1,0 +1,151 @@
+# 最重要的GUI,集成了所有功能
+# 该GUI除了 back 以外的物品都不允许自定义位置，将根据 positions 属性排序
+# 可供显示的位置，必须大于等于最大项目数，支持使用 - 作为范围界定符，使用,分隔
+indexes: '11-17,20-26,29-35'
+row: 6
+title: '&e&l我的公会'
+items:
+  back:
+    index: 50
+    icon:
+      material: ARROW
+      display_name: '&c返回'
+  guild_sign:
+    available:
+      priority: 1
+      icon:
+        material: TORCH
+        display_name: '&d签到'
+        lores:
+          - ' &f100个 公会币'
+          - ' &f100个 苹果'
+    unavailable:
+      priority: 1
+      icon:
+        material: REDSTONE_TORCH_ON
+        display_name: '&d今日已签到'
+        lores:
+          - ' &f已签到 {signed_count}次'
+  guild_info:
+    priority: 0
+    icon:
+      material: PAPER
+      display_name: '&f公会信息'
+      use_papi: true
+      lores:
+        - ' &f公会名: {guild_name}'
+        - ' &f会长: {guild_owner}'
+        - ' &f公会币储备: {guild_gmoney}'
+        - ' &f人数: {guild_member_count}/{guild_max_member_count}'
+        - ' &f创建时间: {guild_creation_time}'
+  guild_announcement:
+    setter:
+      priority: -1
+      icon:
+        material: MAP
+        display_name: '&f设置公会公告'
+        append_lores:
+          - ''
+          - ' &f点击来设置'
+          - ' &f最多 {max} 条'
+          - ' &f使用 {split_str} 分隔'
+    getter:
+      priority: -1
+      icon:
+        material: MAP
+        display_name: '&f公会公告'
+  self_info:
+    priority: -2
+    icon:
+      material: SKULL_ITEM
+      durability: 3
+      use_papi: true
+      display_name: '&f个人信息'
+      lores:
+        - ' &fID: %player_name%'
+        - ' &f金币: %vault_eco_balance%'
+        - ' &f入会时间: {member_join_time}'
+        - ' &f已赞助公会币: {member_donated_gmoney}'
+  guild_members:
+    # 成员看到的图标
+    member:
+      priority: -3
+      icon:
+        material: SKULL_ITEM
+        durability: 3
+        skull_texture: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWQwNzRiMjZiMDljNjdmZWVmZWE0ZTAyNDVmNjMzMDZlNDVjYjkzNWU5OGRiZmFhMzAyMGViNDBjNzA2OTcxOSJ9fX0='
+        display_name: '&f公会成员'
+    # 有“管理”权限的成员看到的图标
+    manager:
+      priority: -3
+      icon:
+        material: SKULL_ITEM
+        durability: 3
+        skull_texture: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWQwNzRiMjZiMDljNjdmZWVmZWE0ZTAyNDVmNjMzMDZlNDVjYjkzNWU5OGRiZmFhMzAyMGViNDBjNzA2OTcxOSJ9fX0='
+        display_name: '&f成员管理'
+  guild_join_check:
+    priority: -4
+    icon:
+      material: SKULL_ITEM
+      durability: 3
+      skull_texture: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjZhNWE0YjQ5MmNmMzg2MWQzMDQ0YTkxMWUxMzY0ZGFkZjdhMmJlNDFmYjJmOWE1YzYxOWRlNWNjOWE1YWYwMCJ9fX0='
+      display_name: '&f入会审批'
+  guild_donate:
+    priority: -5
+    icon:
+      material: DIAMOND
+      display_name: '&f捐赠'
+      lores:
+        - ' &f捐赠公会币'
+  guild_icon_repository:
+    priority: -5
+    icon:
+      material: ITEM_FRAME
+      display_name: '&f图标仓库'
+  guild_shop:
+    priority: -6
+    icon:
+      material: EMERALD
+      display_name: '&f公会商店'
+      lores:
+        - ' &f点击跳转'
+  guild_spawn:
+    available:
+      enabled: false
+      priority: -8
+      icon:
+        material: ENDER_PEARL
+        display_name: '&f传送到主城'
+    unavailable:
+      enabled: false
+      priority: -8
+      icon:
+        material: ENDER_PEARL
+        display_name: '&f传送到主城'
+        lores:
+          - ' &c未设置'
+  guild_set_member_damage:
+    turn_off:
+      priority: -9
+      icon:
+        material: WOOD_SWORD
+        display_name: '&f关闭成员PVP'
+    turn_on:
+      priority: -9
+      icon:
+        material: WOOD_SWORD
+        display_name: '&f打开成员PVP'
+  guild_leave:
+    priority: -999
+    icon:
+      material: BARRIER
+      display_name: '&c退出公会'
+      lores:
+        - ' &c请谨慎操作'
+  guild_delete:
+    priority: -999
+    icon:
+      material: BARRIER
+      display_name: '&c解散公会'
+      lores:
+        - ' &c请谨慎操作'

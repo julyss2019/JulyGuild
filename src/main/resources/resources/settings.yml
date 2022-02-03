@@ -1,0 +1,104 @@
+# 本插件所有游戏版本（1.7.10-1.15）使用UTF-8编码
+# 是否开启数据统计
+metrics_enabled: true
+guild:
+  # 主要用于 ess聊天
+  ess_chat:
+    # 没有可供显示的字符串时显示的字符串
+    non_str: '-'
+  sign:
+    reward:
+      gmoney: 100
+      commands:
+        - 'give <player> APPLE 10'
+  spawn:
+    teleport:
+      wait: 3 # 传送等待
+  shop:
+    launcher: Shop1 # 引导商店，即第一个打开的商店
+  papi:
+    # 没有可供显示的字符串时显示的字符串
+    non_str: '-'
+  # gui设置
+  gui:
+    # 默认
+    default:
+      # 是否默认使用颜色转换
+      colored: true
+      # 是否默认使用PAPI
+      use_papi: true
+      # 是否默认隐藏所有FLAG
+      hide_all_flags: true
+  member_damage:
+    disabled_notice_interval: 10 # 10秒提醒一次，成员伤害关闭
+  icon:
+    default:
+      material: APPLE
+      durability: 0
+      first_lore: '' # 用于支持 SX-Attribute 的物品
+  # 排行榜
+  rank:
+    # 计算公式，可用变量：
+    # {guild_gmoney} 公会币
+    # {guild_member_count} 公会玩家数量
+    # {guild_max_member_count} 公会最大玩家数量
+    formula: '{guild_gmoney}*0.8+{guild_member_count}*0.2'
+  upgrade:
+    # 最大能升级到的人数
+    max_member_count: 10
+  # 默认最大成员数
+  default_max_member_count: 5
+  # 请求
+  request:
+    join:
+      timeout: 3600 # 秒，请求加入超时
+  # 公告
+  announcement:
+    input:
+      cancel_str: '#QX'
+    default:
+      - ' &d欢迎加入本公会~'
+    # 换行符
+    split_str: '#'
+    # 最大公告数量
+    max_count: 5
+  # 创建
+  create:
+    input:
+      cancel_str: '#QX' # 取消创建字符串
+      wait_sec: 60 # 等待秒数
+    # 公会名正则表达式
+    name_regex: '[\u4e00-\u9fa5_a-zA-Z0-9_§]{1,10}'
+    # 禁止公会重名
+    no_duplication_name: true
+    # 消费
+    price:
+      # 金币
+      money:
+        amount: 1000
+      # 点券
+      points:
+        amount: 100
+      # 物品
+      item:
+        amount: 1 # 数量
+        key_lore: '&a创建公会'
+  # 解散
+  dismiss:
+    wait: 10 # 等待时间
+    confirm_str: '确认'
+  # 退出
+  exit:
+    wait: 10
+    confirm_str: '确认'
+  tp_all:
+    # 允许传送的世界
+    send_worlds:
+      - 'world'
+    # 允许被传送的世界
+    receive_worlds:
+      - 'world'
+    timeout: 60 # 秒，过期时间
+    # Shift次数
+    sneak_count: 3
+    sneak_count_interval: 500 # 毫秒，Shift有效计次间隔

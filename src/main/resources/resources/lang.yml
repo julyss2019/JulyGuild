@@ -1,0 +1,125 @@
+VERSION: 2.0.0
+TpAll:
+  no_available_players: '&c当前没有成员可被传送.'
+  no_send_world: '&c当前世界不能发出集结请求.'
+  no_receive_world: '&c当前世界不能接受集结请求.'
+  sneak_counter:
+    title: '&c再按{count}次'
+    subtitle: ''
+    msg: '&c再按{count}次.'
+  received:
+    title: '&c全员集结令'
+    subtitle: ''
+    msg: '&e{sender} 发出了一个全员集结令, 连按Shift键{shift_count}次来接受({timeout}内有效).'
+  teleported:
+    title: '&c已传送'
+    subtitle: ''
+    msg: '&c已传送'
+    sender_msg: '&e成员 &c{member} &e已传送.'
+Shop:
+  gmoney_not_enough: '&c公会币不足, 还需要 &e{need}个&c.'
+Guild:
+  Position:
+    member: '&a会员'
+    owner: '&d会长'
+  member_damage_disabled: '&c成员PVP已关闭!'
+Command:
+  command_format: '&f/${label} ${arg} - ${desc}'
+  sub_command_format: '&f/${label} ${args} - ${desc}'
+  only_player_can_use: '&c该命令只能由玩家执行.'
+  only_console_can_use: '&c该命令只能由控制台执行.'
+  no_per: '&c无权限.'
+  none: '&c没有可供显示的内容.'
+Global:
+  year: '年'
+  month: '月'
+  day: '日'
+  hour: '时'
+  minute: '分'
+  second: '秒'
+  date_format: 'yyyy-MM-dd'
+  date_time_format: 'yyyy-MM-dd HH:mm'
+  prefix: '&a[公会] &f'
+GuildCreateGUI:
+  already_in: '&c你已经在一个公会里了.'
+  money:
+    not_enough: '&c要创建公会, 你还需要 &e{need}个 &c金币.'
+  points:
+    not_enough: '&c要创建公会, 你还需要 &e{need}个 &c点券.'
+  item:
+    not_enough: '&c要创建公会, 你还需要 &e{need}个 &c建帮令.'
+  on_close: '&c创建公会失败!'
+  success:
+    # 不支持title的服务器使用此项发送消息
+    msg: '&d创建公会成功.'
+    title: '&d创建公会成功'
+    subtitle: '{guild_name}'
+    broadcast: '&d恭喜 &e{player} &d创建了公会 &e{guild_name}&d.'
+MainGUI:
+  create:
+    input:
+      tip: '&e请在聊天栏输入 &c公会名 &e后发送聊天消息, 输入 &c{cancel_str} &e取消创建: '
+      cancelled: '&e已取消.'
+      timeout: '&c创建公会超时.'
+      regex_not_match: '&c公会名不合法(只允许中文或英文或数字组合, 且长度限定在10以内).'
+      no_colored_name_permission: '&c你没有彩色公会名的使用权限.'
+      no_duplication_name: '&c这个公会名字已经有人使用了.'
+GuildMineGUI:
+  guild_announcement:
+    set:
+      input: '&e请输入公告, 用 &c{split_str} &e分隔, 最多 &c{max}条&e.'
+      max: '&c公告数量过多, 最多 &e{max}条&c, 你有 &e{len}条&c.'
+      cancelled: '&c已取消设置公告。'
+      list: '{announcement}'
+      success: '&c设置公告成功.'
+  guild_sign:
+    success: '&e签到成功, 获得了 &c10个 &e苹果, 为公会贡献了 &c100个 &e公会币!'
+  guild_spawn:
+    cancelled:
+      title: '&c已取消传送'
+      subtitle: ''
+      msg: '&c已取消传送.'
+    count_down:
+      title: '&c请勿移动'
+      subtitle: '&e传送中 {count_down}s'
+      # 不支持title的服务器使用此项发送消息
+      msg: '&e倒计时 {count_down}s, 请不要移动!'
+    teleported:
+      title: '&d已传送'
+      subtitle: ''
+      # 不支持title的服务器使用此项发送消息
+      msg: '&d已传送.'
+  guild_leave:
+    success: '&d退出公会成功.'
+    failed: '&c退出公会失败.'
+    timeout: '&c确认请求超时.'
+    confirm: '&c如果要退出公会请在 &e{wait}秒内 &c发送: &e{confirm_str}&c, 注意: 这将使你的公会财产全部清空, 请务必谨慎操作, 输入 &e取消 &c以取消操作.'
+  guild_delete:
+    success: '&e解散公会成功.'
+    failed: '&c解散公会失败.'
+    timeout: '&c确认请求超时.'
+    confirm: '&c如果要解散公会请在 &e{wait}秒内 &c发送: &e{confirm_str}&c, 注意: 这将使你的公会财产和成员全部清空, 请务必谨慎操作, 输入 &e取消 &c以取消操作.'
+  guild_set_member_damage:
+    turn_on: '&f成员PVP已开启.'
+    turn_off: '&f成员PVP已关闭.'
+GuildDonateGUI:
+  money:
+    not_enough: '&c金币不足, 至少还需要 &e{need}个 &c金币.'
+    success: '&d成功赞助 &e{reward}个 &d公会币, 花费 &e{price}个 &d金币.'
+  points:
+    not_enough: '&c点券不足, 至少还需要 &e{need}个 &c点券.'
+    success: '&d成功赞助 &e{reward}个 &d公会币, 花费 &e{price}个 &d点券.'
+GuildInfoGUI:
+  request_join:
+    already_have: '&c你已经有一个申请加入请求了, 请等待审批.'
+    guild_full: '&c公会人数已满({max}/{max}).'
+    success: '&d已向公会发送加入申请, 请等待审批.'
+    received: '&e公会收到了一个来自 &c{sender} &e的入会请求, 请及时处理.'
+GuildJoinCheckGUI:
+  invalid: '&c请求已失效.'
+  accept:
+    broadcast: '&d玩家 &e{player} &d加入了本公会.'
+    sender: '&a你加入了 &e{guild} 公会, 处理人: &e{approver}&a.'
+  deny:
+    approver: '&c已拒绝 &e{player} &c请求.'
+    sender: '&c你被拒绝加入 &e{guild} &c公会, 处理人: &e{approver}&c.'

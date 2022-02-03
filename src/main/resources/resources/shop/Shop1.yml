@@ -1,0 +1,112 @@
+name: Shop1
+title: '&e&l公会商店(1/2)'
+row: 6
+other_items:
+  glass:
+    indexes: '47-49,51-53'
+    icon:
+      material: STAINED_GLASS_PANE
+      display_name: ''
+      lores:
+        - '&cby July_ss'
+simple_confirm_gui: &simple_confirm_gui
+  row: 3
+  title: '&c&l确认支付'
+  items:
+    confirm:
+      index: 14
+      icon:
+        material: NETHER_STAR
+        display_name: '&a确认'
+        lores:
+          - ' &e支付公会币: {price}'
+    cancel:
+      index: 27
+      icon:
+        material: ARROW
+        display_name: '&c返回'
+items:
+  '1':
+    index: 11
+    icon:
+      material: GRASS
+      display_name: '&f设置公会主城'
+      lores:
+        - ' &f花费公会币: {price}'
+        - ' &f位置为你现在所在的位置'
+    reward_type: GUILD_SET_SPAWN
+    sell:
+      price: 1000
+      success_message: '&f设置公会主城成功, 花费公会币: &ex{price}&f.'
+      ConfirmGUI: *simple_confirm_gui
+  '2':
+    unavailable:
+      index: 12
+      reward_type: GUILD_UPGRADE
+      icon:
+        material: EXP_BOTTLE
+        display_name: '&f公会升级'
+        lores:
+          - ' &c无法继续升级'
+    available:
+      index: 12
+      icon:
+        material: EXP_BOTTLE
+        display_name: '&f公会升级'
+        lores:
+          - ' &f花费公会币: {price}'
+          - ' &f公会人数: {old} -> {new}'
+    reward_type: GUILD_UPGRADE
+    sell:
+      price: 1000
+      success_message: '&f升级公会人数成功, 最大人数: {old} -> {new}, 花费公会币: x{price}.'
+      ConfirmGUI: *simple_confirm_gui
+  '3':
+    index: 13
+    icon:
+      material: FEATHER
+      display_name: '&f全员集结令'
+      lores:
+        - ' &f请求所有在线成员传送到你所在的位置'
+    reward_type: GUILD_TP_ALL
+    sell:
+      price: 1000
+      success_message: '&f发出全员集结令成功, 花费公会币: &ex{price}&f, 人数: x{count}.'
+      ConfirmGUI: *simple_confirm_gui
+  '4':
+    index: 14
+    icon:
+      material: DIAMOND
+      display_name: '&f购买10个钻石'
+      lores:
+        - ' &f这是个自定义物品'
+        - ' &f花费公会币: {price}'
+        - ' &f购买10个钻石'
+    reward_type: COMMANDS
+    sell:
+      commands:
+        - 'give <player> DIAMOND 1'
+      price: 1000
+      success_message: '&f购买成功, 花费公会币: &ex{price}&f.'
+      ConfirmGUI: *simple_confirm_gui
+  '49':
+    index: 50
+    icon:
+      material: ARROW
+      display_name: '&c返回'
+    reward_type: BACK
+  '54':
+    index: 54
+    icon:
+      material: BOOK
+      display_name: '&f下一页'
+    reward_type: GUILD_SHOP
+    shop: Shop2
+  '46':
+    index: 46
+    reward_type: NONE
+    icon:
+      material: BOOK
+      display_name: '&f上一页'
+      lores:
+        - ' &f无'

@@ -1,0 +1,7 @@
+# Created by .ignore support plugin (hsz.mobi)
+*.iml
+.idea
+target
+proguard.conf
+proguard-dictionary.txt
+proguard

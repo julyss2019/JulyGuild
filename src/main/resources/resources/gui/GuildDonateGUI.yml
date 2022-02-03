@@ -1,0 +1,149 @@
+row: 6
+title: '&e&l捐赠'
+simple_money_confirm_gui: &simple_money_confirm_gui
+  row: 3
+  title: '&c&l确认支付'
+  items:
+    confirm:
+      index: 14
+      icon:
+        material: NETHER_STAR
+        display_name: '&a确认'
+        lores:
+          - ' &e支付方式: 金币'
+          - ' &e支付金额: {price}'
+          - ' &e赞助公会币: {reward}'
+    cancel:
+      index: 27
+      icon:
+        material: ARROW
+        display_name: '&c返回'
+simple_points_confirm_gui: &simple_points_confirm_gui
+  row: 3
+  title: '&c&l确认支付'
+  items:
+    confirm:
+      index: 14
+      icon:
+        material: NETHER_STAR
+        display_name: '&a确认'
+        lores:
+          - ' &e支付方式: 点券'
+          - ' &e支付金额: {price}'
+          - ' &e赞助公会币: {reward}'
+    cancel:
+      index: 27
+      icon:
+        material: ARROW
+        display_name: '&c返回'
+donate_items:
+  'm1':
+    index: 11
+    donate:
+      pay_type: MONEY
+      price: 50
+      reward: 50
+      ConfirmGUI: *simple_money_confirm_gui
+    icon:
+      material: GOLD_INGOT
+      display_name: '&f赞助 &e{reward}个 &f公会币'
+      lores:
+        - ' &f支付方式: 金币'
+        - ' &f价格: {price}'
+  'm2':
+    index: 13
+    donate:
+      pay_type: MONEY
+      price: 500
+      reward: 500
+      ConfirmGUI: *simple_money_confirm_gui
+    icon:
+      material: GOLD_INGOT
+      display_name: '&f赞助 &e{reward}个 &f公会币'
+      lores:
+        - ' &f支付方式: 金币'
+        - ' &f价格: {price}'
+  'm3':
+    index: 15
+    donate:
+      pay_type: MONEY
+      price: 1000
+      reward: 1100
+      ConfirmGUI: *simple_money_confirm_gui
+    icon:
+      material: GOLD_INGOT
+      display_name: '&f赞助 &e{reward}个 &f公会币'
+      lores:
+        - ' &f支付方式: 金币'
+        - ' &f价格: {price}'
+  'm4':
+    index: 17
+    donate:
+      pay_type: MONEY
+      price: 8000
+      reward: 10000
+      ConfirmGUI: *simple_money_confirm_gui
+    icon:
+      material: GOLD_INGOT
+      display_name: '&f赞助 &e{reward}个 &f公会币'
+      lores:
+        - ' &f支付方式: 金币'
+        - ' &f价格: {price}'
+  'p1':
+    index: 29
+    donate:
+      pay_type: POINTS
+      price: 10
+      reward: 10000
+      ConfirmGUI: *simple_points_confirm_gui
+    icon:
+      material: DIAMOND
+      display_name: '&f赞助 &e{reward}个 &f公会币'
+      lores:
+        - ' &f支付方式: 点券'
+        - ' &f价格: {price}'
+  'p2':
+    index: 31
+    donate:
+      pay_type: POINTS
+      price: 30
+      reward: 30000
+      ConfirmGUI: *simple_points_confirm_gui
+    icon:
+      material: DIAMOND
+      display_name: '&f赞助 &e{reward}个 &f公会币'
+      lores:
+        - ' &f支付方式: 点券'
+        - ' &f价格: {price}'
+  'p3':
+    index: 33
+    donate:
+      pay_type: POINTS
+      price: 50
+      reward: 55000
+      ConfirmGUI: *simple_points_confirm_gui
+    icon:
+      material: DIAMOND
+      display_name: '&f赞助 &e{reward}个 &f公会币'
+      lores:
+        - ' &f支付方式: 点券'
+        - ' &f价格: {price}'
+  'p4':
+    index: 35
+    donate:
+      pay_type: POINTS
+      price: 100
+      reward: 110000
+      ConfirmGUI: *simple_points_confirm_gui
+    icon:
+      material: DIAMOND
+      display_name: '&f赞助 &e{reward}个 &f公会币'
+      lores:
+        - ' &f支付方式: 点券'
+        - ' &f价格: {price}'
+items:
+  back:
+    index: 50
+    icon:
+      material: ARROW
+      display_name: '&c返回'

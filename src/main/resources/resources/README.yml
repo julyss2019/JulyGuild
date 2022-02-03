@@ -1,0 +1,25 @@
+version: 1.0.0
+# 使用指南：
+# 如果你想关闭某个功能，在物品项中添加一行 enabled: false 即可，届时图标也不会显示。
+# 如果你要在物品或GUI中使用papi变量，添加一行 use_papi: true 即可。
+# 如果你想使用公会内部变量，添加一行 use_gp: true。
+# 在 gui.yml 中，被 {} 包括的是插件内部的占位符，被 %% 包括的是PAPI占位符
+
+# 公会变量表
+# {guild_name} 公会名
+# {guild_ranking} 公会排名
+# {guild_owner} 公会会长
+# {guild_money} 公会金币储备
+# {guild_points} 公会点券储备
+# {guild_member_count} 公会玩家数量
+# {guild_max_member_count} 公会最大玩家数量
+# {guild_creation_time} 公会创建时间
+# {guild_announcement_1} 公会公告第一条
+
+# 物品Flag表
+# HIDE_ENCHANTS 隐藏附魔
+# HIDE_ATTRIBUTES 隐藏属性
+# HIDE_UNBREAKABLE 隐藏不可破坏
+# HIDE_DESTROYS
+# HIDE_PLACED_ON
+# HIDE_POTION_EFFECTS
